@@ -1,5 +1,7 @@
 @extends('_layouts.master')
 
 @section('body')
-<h1>Hello world!</h1>
+    @foreach ($posts as $post)
+        <p></p><a href="post/{{ str_slug($post->getFilename()) }}">{{ $post->title }}</a></p>
+    @endforeach
 @endsection
